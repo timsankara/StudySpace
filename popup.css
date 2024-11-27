@@ -153,8 +153,8 @@ body {
     cursor: not-allowed;
 }
 
-/* Content Box */
-.content-box {
+/* Markdown Content */
+.markdown-body {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -164,8 +164,69 @@ body {
 }
 
 .text-content {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
+}
+
+.text-content h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary);
+}
+
+.text-content h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.text-content ul {
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.text-content li {
+    margin: 8px 0;
+    position: relative;
+}
+
+.text-content li::marker {
+    color: var(--primary);
+}
+
+.text-content p {
+    margin: 12px 0;
+}
+
+.text-content code {
+    background: var(--background);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.text-content strong {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.text-content em {
+    color: var(--secondary);
+    font-style: italic;
+}
+
+.text-content blockquote {
+    border-left: 4px solid var(--primary);
+    margin: 12px 0;
+    padding: 8px 16px;
+    background: var(--background);
+    color: var(--text-light);
 }
 
 /* Flashcard Styles */
@@ -305,67 +366,70 @@ body {
     text-align: center;
 }
 
-/* Summary Text Formatting */
-.text-content {
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--text);
-    padding: 16px;
-}
-
-.text-content h2 {
-    font-size: 18px;
+/* Summary Typography and Spacing */
+.summary-heading {
+    font-size: 20px;
     font-weight: 600;
     color: var(--primary);
-    margin-bottom: 12px;
+    margin: 0 0 16px 0;
     padding-bottom: 8px;
     border-bottom: 2px solid var(--primary);
 }
 
-.text-content h3 {
+.section-heading {
     font-size: 16px;
     font-weight: 600;
     color: var(--secondary);
-    margin: 16px 0 8px 0;
+    margin: 20px 0 12px 0;
 }
 
-.text-content ul {
+.summary-paragraph {
+    margin: 12px 0;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.summary-list {
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.summary-item {
     margin: 8px 0;
-    padding-left: 20px;
-}
-
-.text-content li {
-    margin: 6px 0;
+    line-height: 1.5;
     position: relative;
 }
 
-.text-content li::before {
+.summary-item::before {
     content: "•";
     color: var(--primary);
-    font-weight: bold;
     position: absolute;
-    left: -15px;
+    left: -16px;
 }
 
-.text-content p {
-    margin: 12px 0;
-}
-
-/* Highlight important information */
-.text-content strong {
+.emphasis-strong {
     color: var(--primary-dark);
     font-weight: 600;
 }
 
-/* Add spacing between sections */
-.text-content section {
-    margin-bottom: 20px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--border);
+.emphasis-italic {
+    color: var(--secondary);
+    font-style: italic;
 }
 
-.text-content section:last-child {
-    border-bottom: none;
+/* Content Container */
+.markdown-body {
+    padding: 16px;
+    background: var(--surface);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Fix spacing issues */
+.summary-list:last-child {
     margin-bottom: 0;
-    padding-bottom: 0;
+}
+
+.summary-paragraph:last-child {
+    margin-bottom: 0;
 }
