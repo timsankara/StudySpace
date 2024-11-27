@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>StudySpace</title>
+        <link rel="stylesheet" href="popup.css" />
+    </head>
+    <body>
+        <div class="app-container">
+            <header class="header">
+                <div class="header-title">
+                    <h1>StudySpace</h1>
+                    <p class="subtitle">AI-Powered Study Assistant</p>
+                </div>
+                <nav class="tab-nav">
+                    <button class="tab-btn active" data-tab="summary">
+                        <span class="icon">📝</span>
+                        Summary
+                    </button>
+                    <button class="tab-btn" data-tab="flashcards">
+                        <span class="icon">🗃️</span>
+                        Flashcards
+                    </button>
+                    <button class="tab-btn" data-tab="quiz">
+                        <span class="icon">✓</span>
+                        Quiz
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main-content">
+                <!-- Summary Tab -->
+                <section id="summary" class="tab-panel active">
+                    <div class="action-bar">
+                        <button id="summarize-selected" class="btn primary">
+                            Summarize Selection
+                        </button>
+                    </div>
+                    <div class="content-box">
+                        <div id="summary-text" class="text-content">
+                            Select text on any webpage and click 'Summarize
+                            Selection' to begin.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Flashcards Tab -->
+                <section id="flashcards" class="tab-panel">
+                    <div class="action-bar">
+                        <button id="generate-cards" class="btn primary">
+                            Generate Flashcards
+                        </button>
+                    </div>
+                    <div class="flashcard-container">
+                        <div class="flashcard">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <p>Front of card</p>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>Back of card</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flashcard-controls">
+                            <button id="prev-card" class="btn secondary">
+                                Previous
+                            </button>
+                            <span class="card-counter">Card 1 of 5</span>
+                            <button id="next-card" class="btn secondary">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quiz Tab -->
+                <section id="quiz" class="tab-panel">
+                    <div class="action-bar">
+                        <button id="generate-quiz" class="btn primary">
+                            Generate Quiz
+                        </button>
+                    </div>
+                    <div class="quiz-container">
+                        <div id="question-text" class="question">
+                            Click 'Generate Quiz' to create questions from your
+                            summary.
+                        </div>
+                        <div id="quiz-options" class="options">
+                            <!-- Options will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0%"></div>
+                    </div>
+                </div>
+                <p class="status">Ready to help you study!</p>
+            </footer>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
