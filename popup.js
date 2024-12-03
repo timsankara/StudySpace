@@ -92,7 +92,7 @@ async function handleSummarize() {
     }
 
     const formattedSummary = formatText(result.summary);
-    UI.elements.get('summaryText').innerHTML = formattedSummary;
+    UI.elements.get("summaryText").innerHTML = formattedSummary;
 
     await chrome.storage.local.set({
       lastSummary: result.summary,

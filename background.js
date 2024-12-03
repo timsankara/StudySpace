@@ -60,7 +60,9 @@ async function handleTextProcessing(text, sendResponse) {
 
     const tokenCount = await aiSession.countPromptTokens(text);
     if (tokenCount > CONFIG.maxTokens) {
-      throw new Error("Text exceeds maximum length");
+      throw new Error(
+        "Oops! The text you selected is a bit too long. Try selecting a smaller section to continue",
+      );
     }
 
     const prompt = `
