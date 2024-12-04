@@ -68,7 +68,7 @@ body {
 .tab-btn {
     padding: 8px;
     border: none;
-    background:  aliceblue ;
+    background: aliceblue;
     color: var(--text);
     font-size: 14px;
     cursor: pointer;
@@ -256,6 +256,10 @@ body {
     transform: rotateY(180deg);
 }
 
+.flashcard-front {
+    background: powderblue;
+}
+
 .flashcard-front,
 .flashcard-back {
     position: absolute;
@@ -267,7 +271,8 @@ body {
     justify-content: center;
     padding: 20px;
     border-radius: 8px;
-    background: var(--surface);
+    /* background: var(--surface); */
+    font-weight:  bold;
     border: 1px solid var(--border);
 }
 
